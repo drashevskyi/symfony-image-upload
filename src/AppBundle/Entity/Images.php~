@@ -1,0 +1,62 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Images
+ *
+ * @ORM\Table(name="images")
+ * @ORM\Entity
+ */
+class Images
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NAME", type="text", nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="SERVERNAME", type="text", nullable=false)
+     */
+    private $servername;
+
+//    /**
+//     * @var integer
+//     *
+//     * @ORM\Column(name="USER_ID", type="integer", nullable=false)
+//     */
+//    private $userId;
+    
+    /**
+     * @var User $user
+     *
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="images")
+     * @ORM\JoinColumn(name="USER_ID", referencedColumnName="id", nullable=false)
+     */
+    private $userId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TIMESTAMP", type="datetime", nullable=false)
+     */
+    private $timestamp;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

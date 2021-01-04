@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="margin-top:20px;"><a href="{{ path('image_list') }}">{{ 'Home'|trans }}</a></div>
+    <div style="margin-top:20px;">{{ 'Add image'|trans }}</div>
+    <div style="margin-top:20px;">{{ form(form) }}</div>
+
+{% endblock %}

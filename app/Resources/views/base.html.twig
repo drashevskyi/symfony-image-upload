@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}ImagesUpload{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div>{{ 'User'|trans }}: {{ app.user.username }}</div>
+        <div><a href="{{ path('logout') }}">{{ 'Log out'|trans }}</a></div>
+        <div style="margin-top:20px;">{% block body %}{% endblock %}</div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

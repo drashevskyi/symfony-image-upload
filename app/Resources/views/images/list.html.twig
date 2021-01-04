@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div><a href="{{ path('image_add') }}">{{ 'Add image'|trans }}</a></div>
+    {% if pagination is not empty %}
+        {% for image in pagination %}
+            <div style="display: inline-block; margin-top: 20px;">
+                <div><img src="{{ asset('uploads/images/' ~ image.serverName) }}" class="img-rounded"/ width="200"></div>
+                <div>{{ image.name }}</div>
+                <div>{{ image.timestamp|date('Y-m-d') }}</div>
+                <div>{{ image.userId.email }}</div>
+            </div>
+        {% endfor %}
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        {% else %}
+            <p>{{ 'No images'|trans }}.</p>
+    {% endif %}
+
+{% endblock %}
