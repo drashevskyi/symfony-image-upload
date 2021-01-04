@@ -1,7 +1,7 @@
 Installation:
 
 Copy files from repo
->cd to project root & run >composer install
+cd to project root & run >composer install
 sqlite3 DB in /app folder -> imagesUpload.db
 Adjust DB vars in parameters.yml if needed
 Create tables in DB table from Entities >php bin/console doctrine:schema:update --force
