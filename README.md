@@ -10,6 +10,7 @@ Installation:
 Comments:
 
 To run the app, register at /register, then login at /login
+
 Uploading images accessed at /add
 
 KnpPaginatorBundle is used in order not to load all rows on a single page
