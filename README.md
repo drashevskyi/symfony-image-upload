@@ -8,6 +8,7 @@ Installation:
 6. For testing used PHPUnit Bridge, to run tests >./vendor/bin/simple-phpunit 2 tests, 3 assertions (AppBundle\Service\FileService tested while running Controller test)
 
 Comments:
+
 When running the app locally, make sure antivirus does not block router.php, add exception if needed
 
 To run the app, register at /register, then login at /login
